@@ -11,7 +11,7 @@
 </head>
 <body id="body">
     <div id="mass" class="col-lg-7 col-md-7 col-sm-9 mt-lg-4 mt-md-4 mt-sm-2 mx-auto shadow rounded p-4">
-        <marquee id="marquee" behavior="" direction="right">WELCOME TO A GRADE CHECKER APP</marquee>
+        <marquee id="marquee" behavior="" direction="">WELCOME TO A GRADE CHECKER APP</marquee>
         
         <h1 class="text-center text-decoration-underline text-light mt-5">Grade Checker</h1>
         <div class="form group my-2">
@@ -27,7 +27,6 @@
         function checkScore () {
            var scoreOfUser = document.getElementById("userScore")
            var userScore = scoreOfUser.value;
-        //    var userScore = ""
            var songExcellent =  new Audio("audio/Excellent.mp3")
             var songVeryGood = new Audio("audio/very good.mp3")
             var songGood = new Audio("audio/good.mp3")
@@ -38,8 +37,7 @@
 
            if(userScore >=70 && userScore <=100) {
             showScore.innerHTML = "EXCELLENT"
-            showScore.style.color = "Green"
-            
+            showScore.style.color = "Green"    
             songExcellent.play ();
             scoreOfUser.value = ""
             
@@ -73,9 +71,10 @@
             songFail.play ();
             scoreOfUser.value = ""
 
-           }else if(userScore ="") {
+           }
+           else if(userScore ="") {
             showScore.innerHTML = ""
-              scoreOfUser.value = ""
+            scoreOfUser.value = ""
           
 
            } else {
